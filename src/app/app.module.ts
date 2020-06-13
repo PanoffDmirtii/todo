@@ -76,7 +76,6 @@ const routes: Routes = [
   exports: [RouterModule],
   providers: [AuthGuard],
   bootstrap: [AppComponent],
-  // entryComponents: [ModalComponent]
 })
 export class AppModule {
 }
