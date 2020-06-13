@@ -1,0 +1,18 @@
+<div [ngClass]="{'performed': todoItem.completed}" class="todo-item">
+  <div class="todo-item-left">
+    <mat-checkbox [checked]="todoItem.completed" color="primary" (change)="toggleComplete($event)"></mat-checkbox>
+    <span class="item-title" *ngIf="!isEdit">{{todoItem.title}}</span>
+    <mat-form-field *ngIf="isEdit" class="item-title-edit">
+      <input matInput type="text" value="{{todoItem.title}}" (keyup.enter)="saveTitle($event)"/>
+    </mat-form-field>
+  </div>
+  <div class="todo-item-right">
+<!--    <span class="item-date">{{todoItem.date | date}}</span>-->
+    <button mat-icon-button color="primary" (click)="toggleEdit()">
+      <mat-icon>edit</mat-icon>
+    </button>
+    <button mat-icon-button color="warn" (click)="deleteItem()">
+      <mat-icon>delete</mat-icon>
+    </button>
+  </div>
+</div>

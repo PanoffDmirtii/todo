@@ -1,0 +1,24 @@
+.todo-item {
+  padding: 5px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+}
+
+.item-title {
+  padding-left: 10px;
+}
+
+.item-date {
+  padding-right: 10px;
+}
+
+.performed {
+  text-decoration: line-through;
+}
+
+.item-title-edit {
+  padding-left: 10px;
+  padding-bottom: 0;
+}

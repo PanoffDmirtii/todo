@@ -1,0 +1,14 @@
+.login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-card {
+  width: 300px;
+  margin-top: 100px;
+}
+
+.separator {
+  border-bottom: 1px solid #ccc;
+}

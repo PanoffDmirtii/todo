@@ -1,0 +1,29 @@
+<div *ngIf="userData" class="user">
+  <div class="user__name">Вы вошли как {{userData.first_name}} {{userData.last_name}}</div>
+  <img width="20%" src="{{userData.photo_200_orig}}" alt="" class="user__img">
+</div>
+<div class="wrapper">
+  <mat-card class="todo-card">
+    <mat-card-header>
+      <mat-card-title>My Todo List</mat-card-title>
+    </mat-card-header>
+    <div class="todo-card-add">
+      <mat-form-field class="input-full-width">
+        <mat-label>Write new todo</mat-label>
+        <input [(ngModel)]="newTodoTitle" matInput value="">
+      </mat-form-field>
+      <div>
+        <button [disabled]="!newTodoTitle" (click)="addItem()" mat-flat-button color="primary">Add</button>
+      </div>
+    </div>
+    <mat-card-content *ngIf="(todoService.todoList | async) else loading">
+    <div *ngFor="let item of todoService.todoList | async">
+      <app-item-todo [todoItem]="item"></app-item-todo>
+    </div>
+    </mat-card-content>
+    <ng-template #loading>
+      <app-loader></app-loader>
+    </ng-template>
+  </mat-card>
+</div>
+

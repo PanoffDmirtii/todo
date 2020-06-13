@@ -1,0 +1,25 @@
+.wrapper {
+  padding-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.todo-card {
+  max-width: 900px;
+  width: 600px;
+}
+
+.todo-card-add {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.user {
+  padding: 20px;
+}
+
+.user__name {
+  padding: 10px 0;
+  font-size: 21px;
+}
