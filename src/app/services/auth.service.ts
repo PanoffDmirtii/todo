@@ -13,7 +13,7 @@ export class AuthService {
 
   private authUrl = 'https://oauth.vk.com/';
   private clientId = 7509359;
-  private redirectUri = 'http://a95b084bafee.ngrok.io/auth';
+  private redirectUri = 'https://PanoffDmirtii.github.io/todo/auth';
   private secret = '3CTyujmNGrI6C3j4aZKq';
 
   constructor(
